@@ -16,14 +16,10 @@
 
 function isPalindrome(word) {
    //Start Coding Here
- 
-//    let position = Math.floor(word.length/2)
-//    if (word.length % 2 === 0) {
-//     return word.slice(position - 1, position + 1);
-//     } else {
-//     return word.charAt(position);
-//     }
-
+    let res = ''
+    for (let i=0; i < word.length; i++) {
+        res = word[i] + res
+    } return res === word
 };
 
 let result1 = isPalindrome("madam");
