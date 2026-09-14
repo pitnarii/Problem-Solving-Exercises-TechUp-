@@ -12,7 +12,16 @@
 
 function groupBy(items, property) {
    //Start Coding Here
+   const res = {}
+   items.forEach((item) => {
+    const key = item[property]
+    if (!res[key]) { 
+        res[key] = []
+    }
    
+    res[key].push(item)
+   })
+   return res
 };
 
 let result1 = groupBy([
